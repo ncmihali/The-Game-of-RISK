@@ -1,11 +1,13 @@
-# ECE651_RISC
-![pipeline](https://gitlab.oit.duke.edu/lz198/multi-project-gradle-example/badges/master/pipeline.svg)
-![coverage](https://gitlab.oit.duke.edu/lz198/multi-project-gradle-example/badges/master/coverage.svg?job=test)
-# Grading policy:
-1. Functionalities of the game: need to fulfill all the requirements & bug free. Consider all the corner cases!
-2. UML diagram -> first draft(before started codeing) and final draft should not change much
-3. Cooperation between team members: use issue, branch, merges
-4. CI/CD & test coverage
-5. documentation & naming
+# ECE651 RISK Game Project!
 
-CI/CD Pages: https://lz198.pages.oit.duke.edu/multi-project-gradle-example/dashboard.html
+Welcome to RISK!
+
+This is a game where you fight your oponent and try to take over each other's territories. 
+In order to play, download the repository, and start the server with:
+  ./gradlew run-server
+
+Next start each client to start the game:
+  ./gradlew run-client
+  ./gradlew run-client (two clients for 2 players)
+
+
