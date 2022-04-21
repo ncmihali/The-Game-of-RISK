@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="cl_main" prefHeight="780.0" prefWidth="922.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.duke.ece651.mp.client.Controller">
+  <children>
+    <AnchorPane maxHeight="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <ImageView fitHeight="717.0" fitWidth="936.0" layoutX="-3.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ECE651min.jpeg" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport></ImageView>
+            <Polygon fx:id="scadrialselected" fill="DODGERBLUE" layoutX="403.0" layoutY="382.0" points="22.0, 77.0, 40.0, 65.0, 82.0, 77.0, 97.0, 20.0, 107.0, -39.0, 82.0, -60.0, -33.0, -50.0, -121.0, -39.0, -114.0, 47.0, -79.0, 98.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 0;" />
+            <Polygon fx:id="hogwartsselected" fill="DODGERBLUE" layoutX="598.0" layoutY="383.0" points="-50.0, 123.0, 29.0, 116.0, 43.0, 87.0, 50.0, 47.0, 72.0, 2.0, 37.0, -50.0, -26.0, -63.0, -65.0, -63.0, -73.0, -8.0, -88.0, 80.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 0;" />
+            <Polygon fx:id="rosharselected" fill="DODGERBLUE" layoutX="359.0" layoutY="515.0" points="-119.0, 104.0, 53.0, 123.0, 129.0, 96.0, 160.0, 18.0, 118.0, -37.0, -28.0, -26.0, -96.0, -37.0, -140.0, 0.0, -198.0, 32.0, -198.0, 67.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 0;" />
+            <Polygon fx:id="midkemiaselected" fill="DODGERBLUE" layoutX="382.0" layoutY="145.0" points="-103.0, 157.0, -59.0, 177.0, 42.0, 157.0, 42.0, 40.0, 53.0, -15.0, 19.0, -66.0, -75.0, -66.0, -85.0, -2.0, -95.0, 54.0, -75.0, 117.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 0;" />
+            <Polygon fx:id="narniaselected" fill="DODGERBLUE" layoutX="182.0" layoutY="153.0" points="-114.0, 145.0, 12.0, 165.0, 98.0, 122.0, 91.0, 55.0, 98.0, -15.0, 49.0, -49.0, -29.0, -27.0, -85.0, -2.0, -135.0, 43.0, -150.0, 115.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 0;" />
+            <Polygon fx:id="ozselected" fill="DODGERBLUE" layoutX="572.0" layoutY="184.0" points="-66.0, 122.0, 3.0, 104.0, 77.0, 112.0, 90.0, 79.0, 65.0, 38.0, 3.0, 14.0, -59.0, -2.0, -114.0, 2.0, -114.0, 46.0, -127.0, 122.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 0;" />
+            <Polygon fx:id="gondorselected" fill="DODGERBLUE" layoutX="573.0" layoutY="58.0" points="-33.0, 99.0, 32.0, 137.0, 90.0, 128.0, 90.0, 79.0, 77.0, 28.0, 9.0, 2.0, -59.0, -2.0, -99.0, 19.0, -127.0, 34.0, -115.0, 112.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 0;" />
+            <Polygon fx:id="elantrisselected" fill="DODGERBLUE" layoutX="157.0" layoutY="412.0" points="-132.0, 47.0, -75.0, 92.0, 15.0, 102.0, 65.0, 73.0, 109.0, 16.0, 109.0, -47.0, 50.0, -74.0, -15.5, -82.0, -75.0, -82.0, -132.0, -30.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 0;" />
+            <Button fx:id="attackbutton" layoutX="700.0" layoutY="60.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="94.0" style="-fx-background-radius: 20;" stylesheets="@riskdesign.css" text="Attack">
+               <font>
+                  <Font name="Optima Regular" size="13.0" />
+               </font></Button>
+            <Label fx:id="narniasize" layoutX="116.0" layoutY="208.0" text="Size:" textFill="WHITE">
+               <tooltip>
+                  <Tooltip fx:id="narniatooltip" text="Empty Tooltip" />
+               </tooltip>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font></Label>
+            <Label fx:id="midkemiasize" layoutX="315.0" layoutY="187.0" text="Size:" textFill="WHITE">
+               <tooltip>
+                  <Tooltip fx:id="midkemiatooltip" text="Empty Tooltip" />
+               </tooltip>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font></Label>
+            <Label fx:id="ozsize" layoutX="516.0" layoutY="242.0" text="Size:" textFill="#fdfdfd">
+               <tooltip>
+                  <Tooltip fx:id="oztooltip" text="Empty Tooltip" />
+               </tooltip>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font></Label>
+            <Label fx:id="gondorsize" layoutX="512.0" layoutY="118.0" text="Size:" textFill="WHITE">
+               <tooltip>
+                  <Tooltip fx:id="gondortooltip" text="Empty Tooltip" />
+               </tooltip>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font></Label>
+            <Label fx:id="elantrissize" layoutX="104.0" layoutY="407.0" text="Size:" textFill="WHITE">
+               <tooltip>
+                  <Tooltip fx:id="elantristooltip" text="Empty Tooltip" />
+               </tooltip>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font></Label>
+            <Label fx:id="scadrialsize" layoutX="353.0" layoutY="390.0" text="Size:" textFill="WHITE">
+               <tooltip>
+                  <Tooltip fx:id="scadrialtooltip" text="Empty Tooltip" />
+               </tooltip>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font></Label>
+            <Label fx:id="rosharsize" layoutX="307.0" layoutY="545.0" text="Size:" textFill="WHITE">
+               <tooltip>
+                  <Tooltip fx:id="roshartooltip" text="Empty Tooltip" />
+               </tooltip>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font></Label>
+            <Label fx:id="hogwartssize" layoutX="539.0" layoutY="400.0" text="Size:" textFill="#f7f5f5">
+               <tooltip>
+                  <Tooltip fx:id="hogwartstooltip" text="Empty Tooltip" />
+               </tooltip>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font></Label>
+            <Button fx:id="movebutton" layoutX="700.0" layoutY="29.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" style="-fx-background-radius: 20;" styleClass="button" stylesheets="@riskdesign.css" text="Move">
+               <font>
+                  <Font name="Optima Regular" size="13.0" />
+               </font></Button>
+            <Button fx:id="upgradebutton" layoutX="799.0" layoutY="29.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" style="-fx-background-radius: 20;" stylesheets="@riskdesign.css" text="Upgrade" />
+            <Button id="done" fx:id="donebutton" layoutX="804.0" layoutY="58.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-radius: 20;" stylesheets="@riskdesign.css" text="Done">
+               <font>
+                  <Font name="Optima Regular" size="13.0" />
+               </font></Button>
+            <Label fx:id="playername" layoutX="32.0" layoutY="-10.0" prefHeight="59.0" prefWidth="147.0" text="Red Player" textFill="WHITE">
+               <font>
+                  <Font name="Apple Chancery" size="20.0" />
+               </font></Label>
+            <Label fx:id="playerresources" layoutX="30.0" layoutY="48.0" prefHeight="66.0" prefWidth="240.0" text="Resources:" textFill="WHITE">
+               <font>
+                  <Font name="Apple Chancery" size="18.0" />
+               </font></Label>
+            <Label fx:id="playertechlevel" layoutX="31.0" layoutY="89.0" prefHeight="49.0" prefWidth="233.0" text="Tech. lvl:" textFill="WHITE">
+               <font>
+                  <Font name="Apple Chancery" size="18.0" />
+               </font></Label>
+            <Separator layoutX="32.0" layoutY="38.0" prefHeight="3.0" prefWidth="94.0" />
+            <Text fill="WHITE" layoutX="14.0" layoutY="624.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Actvitiy Log">
+               <font>
+                  <Font name="Apple Chancery" size="23.0" />
+               </font></Text>
+            <Button fx:id="upgradetlbutton" layoutX="547.0" layoutY="566.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" style="-fx-background-radius: 20;" stylesheets="@riskdesign.css" text="Upgrade TL" />
+            <Label fx:id="promptlabel" alignment="CENTER" contentDisplay="CENTER" layoutX="181.0" layoutY="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="66.0" prefWidth="512.0" text="Please Select an Action (to the right)" textAlignment="JUSTIFY" textFill="#e6dcdc" wrapText="true">
+               <font>
+                  <Font name="PT Serif Caption" size="19.0" />
+               </font></Label>
+            <Button fx:id="narniabutton" layoutX="469.0" layoutY="246.0" mnemonicParsing="false" text="Narnia" visible="false" />
+            <Button fx:id="midkemiabutton" layoutX="530.0" layoutY="246.0" mnemonicParsing="false" text="Midkemia" visible="false" />
+            <Button fx:id="ozbutton" layoutX="469.0" layoutY="271.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="62.0" text="Oz" visible="false" />
+            <Button fx:id="gondorbutton" layoutX="530.0" layoutY="271.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="81.0" text="Gondor" visible="false" />
+            <Button id="cancel" fx:id="cancelbutton" layoutX="778.0" layoutY="94.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" stylesheets="@riskdesign.css" text="Cancel" />
+            <ScrollPane id="activitylog" fx:id="activitylogscroll" layoutY="648.0" prefHeight="147.0" prefWidth="933.0" stylesheets="@riskdesign.css">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextArea id="activitylog" fx:id="activitylog" editable="false" layoutX="-4.0" layoutY="-2.0" prefHeight="228.0" prefWidth="922.0" stylesheets="@riskdesign.css" wrapText="true">
+                           <font>
+                              <Font name="Optima Regular" size="15.0" />
+                           </font></TextArea>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <Spinner id="units" fx:id="level0slider" editable="true" layoutX="794.0" layoutY="153.0" prefHeight="24.0" prefWidth="63.0" stylesheets="@riskdesign.css" />
+            <Spinner id="units" fx:id="level1slider" editable="true" layoutX="794.0" layoutY="218.0" prefHeight="24.0" prefWidth="63.0" stylesheets="@riskdesign.css" />
+            <Spinner id="units" fx:id="level2slider" editable="true" layoutX="793.0" layoutY="279.0" prefHeight="24.0" prefWidth="63.0" stylesheets="@riskdesign.css" />
+            <Spinner id="units" fx:id="level3slider" editable="true" layoutX="793.0" layoutY="330.0" prefHeight="24.0" prefWidth="63.0" stylesheets="@riskdesign.css" />
+            <Spinner id="units" fx:id="level4slider" editable="true" layoutX="793.0" layoutY="385.0" prefHeight="24.0" prefWidth="63.0" stylesheets="@riskdesign.css" />
+            <Spinner id="units" fx:id="level5slider" editable="true" layoutX="793.0" layoutY="441.0" prefHeight="24.0" prefWidth="63.0" stylesheets="@riskdesign.css" />
+            <Label fx:id="level0label" layoutX="865.0" layoutY="137.0" prefHeight="49.0" prefWidth="46.0" text="Lvl0" textFill="#fdfdfd">
+               <font>
+                  <Font name="Apple Chancery" size="17.0" />
+               </font></Label>
+            <Label fx:id="level1label" layoutX="866.0" layoutY="203.0" prefHeight="52.0" prefWidth="46.0" text="Lvl1" textFill="WHITE">
+               <font>
+                  <Font name="Apple Chancery" size="17.0" />
+               </font></Label>
+            <Label fx:id="level2label" layoutX="865.0" layoutY="265.0" prefHeight="50.0" prefWidth="46.0" text="Lvl2" textFill="#fffefe">
+               <font>
+                  <Font name="Apple Chancery" size="17.0" />
+               </font></Label>
+            <Label fx:id="level3label" layoutX="865.0" layoutY="317.0" prefHeight="49.0" prefWidth="46.0" text="Lvl3" textFill="#fdfdfd">
+               <font>
+                  <Font name="Apple Chancery" size="17.0" />
+               </font></Label>
+            <Label fx:id="level4label" layoutX="865.0" layoutY="372.0" prefHeight="49.0" prefWidth="54.0" text="Lvl4" textFill="#fcfafa">
+               <font>
+                  <Font name="Apple Chancery" size="17.0" />
+               </font></Label>
+            <Label fx:id="level5label" layoutX="865.0" layoutY="425.0" prefHeight="52.0" prefWidth="46.0" text="Lvl5" textFill="WHITE">
+               <font>
+                  <Font name="Apple Chancery" size="17.0" />
+               </font></Label>
+            <Spinner id="units" fx:id="level6slider" editable="true" layoutX="793.0" layoutY="495.0" prefHeight="24.0" prefWidth="63.0" stylesheets="@riskdesign.css" />
+            <Label fx:id="level6label" layoutX="865.0" layoutY="482.0" prefHeight="49.0" prefWidth="46.0" text="Lvl6" textFill="#fffefe">
+               <font>
+                  <Font name="Apple Chancery" size="17.0" />
+               </font></Label>
+            <Button id="done" fx:id="submitbutton" layoutX="748.0" layoutY="549.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="81.0" style="-fx-background-radius: 20;" stylesheets="@riskdesign.css" text="Submit" />
+            <Label fx:id="foodresources" layoutX="30.0" layoutY="27.0" prefHeight="52.0" prefWidth="240.0" text="Resources:" textFill="WHITE">
+               <font>
+                  <Font name="Apple Chancery" size="18.0" />
+               </font></Label>
+            <Label fx:id="costlabel" layoutX="835.0" layoutY="539.0" prefHeight="52.0" prefWidth="87.0" text="Cost: " textFill="#fdfdfd">
+               <font>
+                  <Font name="Apple Chancery" size="17.0" />
+               </font></Label>
+            <Label fx:id="upgradecostlabel" layoutX="648.0" layoutY="558.0" prefHeight="35.0" prefWidth="81.0" text="Cost: " textFill="#fdfdfd">
+               <font>
+                  <Font name="Apple Chancery" size="17.0" />
+               </font></Label>
+            <Button fx:id="level0button" layoutX="732.0" layoutY="149.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="158.0" style="-fx-background-radius: 20;" stylesheets="@riskdesign.css" text="Move" visible="false" />
+            <Button fx:id="level1button" layoutX="732.0" layoutY="175.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="158.0" style="-fx-background-radius: 20;" stylesheets="@riskdesign.css" text="Move" visible="false" />
+            <Button fx:id="level2button" layoutX="732.0" layoutY="201.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="158.0" style="-fx-background-radius: 20;" stylesheets="@riskdesign.css" text="Move" visible="false" />
+            <Button fx:id="level3button" layoutX="732.0" layoutY="227.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="158.0" style="-fx-background-radius: 20;" stylesheets="@riskdesign.css" text="Move" visible="false" />
+            <Button fx:id="level4button" layoutX="732.0" layoutY="253.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="158.0" style="-fx-background-radius: 20;" stylesheets="@riskdesign.css" text="Move" visible="false" />
+            <Button fx:id="finishbutton" layoutX="733.0" layoutY="340.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="158.0" stylesheets="@riskdesign.css" text="Finish" visible="false" />
+            <Button fx:id="level5button" layoutX="732.0" layoutY="279.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="158.0" style="-fx-background-radius: 20;" stylesheets="@riskdesign.css" text="Move" visible="false" />
+            <Label fx:id="costlabel2" layoutX="747.0" layoutY="367.0" prefHeight="25.0" prefWidth="136.0" text="Cost: " textFill="#fdfdfd" visible="false">
+               <font>
+                  <Font name="Apple Chancery" size="17.0" />
+               </font></Label>
+            <Label fx:id="narnialabel" layoutX="117.0" layoutY="172.0" prefHeight="43.0" prefWidth="77.0" text="Narnia" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="midkemialabel" layoutX="294.0" layoutY="162.0" prefWidth="102.0" text="Midkemia" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="gondorlabel" layoutX="511.0" layoutY="91.0" text="Gondor" textFill="#fcfcfc">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="elantrislabel" layoutX="105.0" layoutY="378.0" text="Elantris" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="scadriallabel" layoutX="351.0" layoutY="366.0" text="Scadrial" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="rosharlabel" layoutX="307.0" layoutY="515.0" text="Roshar" textFill="#f5f5f5">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="hogwartslabel" layoutX="538.0" layoutY="371.0" text="Hogwarts" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="ozlabel" layoutX="516.0" layoutY="215.0" text="Oz" textFill="#f8f8f8">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="narniadatalabel" alignment="CENTER" layoutX="45.0" layoutY="191.0" prefHeight="113.0" prefWidth="177.0" text="Label" textAlignment="CENTER" textFill="#ffe57c" visible="false">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="midkemiadatalabel" alignment="CENTER" layoutX="296.0" layoutY="141.0" prefHeight="167.0" prefWidth="136.0" text="Label" textAlignment="CENTER" textFill="#ffe57c" visible="false">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="gondordatalabel" alignment="CENTER" layoutX="450.0" layoutY="79.0" prefHeight="113.0" prefWidth="217.0" text="Label" textAlignment="CENTER" textFill="#ffe57c" visible="false">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="elantrisdatalabel" alignment="CENTER" layoutX="39.0" layoutY="366.0" prefHeight="139.0" prefWidth="233.0" text="Label" textAlignment="CENTER" textFill="#ffe57c" visible="false">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="scadrialdatalabel" alignment="CENTER" layoutX="285.0" layoutY="337.0" prefHeight="123.0" prefWidth="217.0" text="Label" textAlignment="CENTER" textFill="#ffe57c" visible="false">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="hogwartsdatalabel" alignment="CENTER" layoutX="530.0" layoutY="326.0" prefHeight="177.0" prefWidth="136.0" text="Label" textAlignment="CENTER" textFill="#ffe57c" visible="false">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="roshardatalabel" alignment="CENTER" layoutX="246.0" layoutY="486.0" prefHeight="131.0" prefWidth="249.0" text="Label" textAlignment="CENTER" textFill="#ffe57c" visible="false">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="ozdatalabel" alignment="CENTER" layoutX="455.0" layoutY="193.0" prefHeight="105.0" prefWidth="206.0" text="Label" textAlignment="CENTER" textFill="#ffe57c" visible="false">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="11.0" />
+               </font>
+            </Label>
+            <Button fx:id="level6button" layoutX="732.0" layoutY="304.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="158.0" style="-fx-background-radius: 20;" stylesheets="@riskdesign.css" text="Button" visible="false" />
+            <ImageView fx:id="level0picture" fitHeight="71.0" fitWidth="46.0" layoutX="743.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Screen_Shot_2022-04-12_at_2.39.46_PM-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="level1picture" fitHeight="79.0" fitWidth="46.0" layoutX="743.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Screen_Shot_2022-04-12_at_2.40.01_PM-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="level2picture" fitHeight="49.0" fitWidth="46.0" layoutX="743.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Screen_Shot_2022-04-12_at_2.40.22_PM-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="level3picture" fitHeight="73.0" fitWidth="46.0" layoutX="743.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Screen_Shot_2022-04-12_at_2.40.36_PM-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="level4picture" fitHeight="50.0" fitWidth="47.0" layoutX="743.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Screen_Shot_2022-04-12_at_2.40.54_PM-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="level5picture" fitHeight="50.0" fitWidth="46.0" layoutX="743.0" layoutY="433.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Screen_Shot_2022-04-12_at_2.41.07_PM-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="level6picture" fitHeight="62.0" fitWidth="46.0" layoutX="743.0" layoutY="482.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Screen_Shot_2022-04-12_at_2.41.15_PM-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="narniacolor" fitHeight="29.0" fitWidth="30.0" layoutX="184.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@IMG_3556.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="midkemiacolor" fitHeight="29.0" fitWidth="33.0" layoutX="398.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@IMG_3556.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gondorcolor" fitHeight="29.0" fitWidth="36.0" layoutX="591.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@IMG_3556.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="elantriscolor" fitHeight="44.0" fitWidth="30.0" layoutX="180.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@IMG_3555.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="scadrialcolor" fitHeight="29.0" fitWidth="33.0" layoutX="436.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@IMG_3555.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rosharcolor" fitHeight="29.0" fitWidth="36.0" layoutX="379.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@IMG_3555.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hogwartscolor" fitHeight="29.0" fitWidth="36.0" layoutX="636.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@IMG_3555.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="ozcolor" fitHeight="29.0" fitWidth="36.0" layoutX="551.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@IMG_3556.PNG" />
+               </image>
+            </ImageView>
+            <Button id="showunits" fx:id="showdatabutton" layoutX="539.0" layoutY="528.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="111.0" style="-fx-background-radius: 20;" stylesheets="@riskdesign.css" text="Show Units" />
+            <Button id="button" fx:id="dragonstrikebutton" layoutX="800.0" layoutY="93.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" style="-fx-background-radius: 20;" stylesheets="@riskdesign.css" text="Meteor" visible="false">
+               <font>
+                  <Font name="Optima Regular" size="13.0" />
+               </font></Button>
+            <Label fx:id="dragonstrikecost" layoutX="803.0" layoutY="123.0" prefHeight="32.0" prefWidth="102.0" text="Cost: 500" textFill="#fdfdfd" visible="false">
+               <font>
+                  <Font name="Apple Chancery" size="17.0" />
+               </font>
+            </Label>
+            <Rectangle fx:id="oz" arcHeight="5.0" arcWidth="5.0" fill="#c8ffcc" height="113.0" layoutX="437.0" layoutY="188.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="233.0" />
+            <Rectangle fx:id="narnia" arcHeight="5.0" arcWidth="5.0" fill="#c8ffcc" height="198.0" layoutX="40.0" layoutY="109.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" styleClass="hover" width="233.0" />
+            <Rectangle fx:id="midkemia" arcHeight="5.0" arcWidth="5.0" fill="#c8ffcc" height="233.0" layoutX="289.0" layoutY="79.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+            <Rectangle fx:id="gondor" arcHeight="5.0" arcWidth="5.0" fill="#c8ffcc" height="123.0" layoutX="445.0" layoutY="63.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="225.0" />
+            <Rectangle fx:id="elantris" arcHeight="5.0" arcWidth="5.0" fill="#cbe6ff" height="167.0" layoutX="17.0" layoutY="330.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="249.0" />
+            <Rectangle fx:id="scadrial" arcHeight="5.0" arcWidth="5.0" fill="#cbe6ff" height="139.0" layoutX="286.0" layoutY="330.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="217.0" />
+            <Rectangle fx:id="roshar" arcHeight="5.0" arcWidth="5.0" fill="#cbe6ff" height="139.0" layoutX="214.0" layoutY="485.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="284.0" />
+            <Rectangle fx:id="hogwarts" arcHeight="5.0" arcWidth="5.0" fill="#cbe6ff" height="186.0" layoutX="519.0" layoutY="320.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

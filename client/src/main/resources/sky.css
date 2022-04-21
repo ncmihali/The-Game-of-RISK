@@ -1,0 +1,11 @@
+/**
+ * Name: JavaFX Sky look n feel
+ * Publisher: Apress
+ * Author: Carl Dea
+ * 
+ */
+.button:hover{
+    -fx-font-weight: bold;
+    -fx-background-color: blue;
+    -fx-background-radius: 20;
+}

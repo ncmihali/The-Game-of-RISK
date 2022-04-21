@@ -1,0 +1,15 @@
+Red player:
+-------------
+1 units in Narnia (next to:  Midkemia, Elantris)
+3 units in Hogwarts (next to:  Mordor, Roshar, Scadrial)
+4 units in Oz (next to:  Gondor, Midkemia, Mordor, Scadrial)
+5 units in Gondor (next to:  Oz, Mordor)
+6 units in Midkemia (next to:  Narnia, Oz, Elantris, Scadrial)
+8 units in Mordor (next to:  Hogwarts, Oz, Gondor, Scadrial)
+
+Blue player:
+-------------
+15 units in Elantris (next to:  Narnia, Midkemia, Roshar, Scadrial)
+18 units in Roshar (next to:  Hogwarts, Elantris, Scadrial)
+22 units in Scadrial (next to:  Hogwarts, Oz, Midkemia, Mordor, Elantris, Roshar)
+

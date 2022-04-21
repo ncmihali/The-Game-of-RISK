@@ -1,0 +1,69 @@
+/**
+ * Name: JavaFX Sky look n feel
+ * Publisher: Apress
+ * Author: Carl Dea
+ * 
+ */
+#units.spinner{
+    -fx-background-radius: 20;
+    -fx-control-inner-background:  "#FDEABF";
+}
+
+#activitylog.text-area{
+    -fx-control-inner-background:  "#FDEABF";
+    -fx-background-size: 100% 100%;
+}
+
+#showunits.button{
+    -fx-background-radius: 20;
+    -fx-background-image:  url('buttons/darkorange.png');
+    -fx-text-fill: '#F9F6EE';
+    -fx-background-size: 100% 100%;
+    -fx-background-color: translucent;
+    -fx-font-family: Optima;
+}
+#done.button{
+    -fx-background-radius: 20;
+    -fx-background-image:  url('buttons/darkgreen.png');
+    -fx-text-fill: '#F9F6EE';
+    -fx-background-size: 100% 100%;
+    -fx-background-color: translucent;
+    -fx-font-family: Optima;
+}
+
+#cancel.button{
+    -fx-background-radius: 20;
+    -fx-background-image:  url('buttons/darkblue.png');
+    -fx-text-fill: '#F9F6EE';
+    -fx-background-size: 100% 100%;
+    -fx-background-color: translucent;
+    -fx-font-family: Optima;
+}
+
+.button{
+    -fx-background-radius: 20;
+    -fx-background-image:  url('buttons/darkred.png');
+    -fx-text-fill: '#F9F6EE';
+    -fx-background-size: 100% 100%;
+    -fx-background-color: translucent;
+    -fx-font-family: Optima;
+}
+.button:hover{
+     -fx-background-image:  url('buttons/lightred.png');
+    -fx-background-size: 100% 100%;
+}
+
+#cancel.button:hover{
+     -fx-background-image:  url('buttons/lightblue.png');
+    -fx-background-size: 100% 100%;
+}
+
+#done.button:hover{
+     -fx-background-image:  url('buttons/lightgreen.png');
+    -fx-background-size: 100% 100%;
+}
+
+#showunits.button:hover{
+    -fx-background-image:  url('buttons/lightorange.png');
+    -fx-background-size: 100% 100%;
+}

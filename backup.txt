@@ -1,0 +1,209 @@
+  /**
+   * Play one turn of the game, in which client will perform action such as attack
+   * and move multiple times
+   */
+  public void playOneTurn() throws IOException {
+    TextDisplayInfo printer = new TextDisplayInfo(System.out);
+    while (true) {
+      try {
+        Action constructed = parseActionInput();
+        player.sendToServer(constructed);
+        if (constructed instanceof DoneAction) {
+          break;
+        }
+        String msg = null;
+        while (msg == null) {
+          msg = connection.receive();
+        }
+        if (msg.equals("Action successful!")) {
+          constructed.doAction(world);
+          printer.displayMap(world);
+        } else {
+          System.out.println(msg);
+        }
+      } catch (IllegalArgumentException e) {
+        System.out.println(e.getMessage());
+      }
+    }
+  }
+  
+    /**
+   * prompt for the user to select an action to do: M for move,A for attack and D
+   * for Done(commit all actions)
+   * 
+   * @param player the the player class that represent the user on client side
+   * @return an action to be performed
+   */
+  public Action parseActionInput() throws IOException {
+    String s = this.player.readInput(player.formatPrompt());
+    if (s.equals("M")) {
+      return parseMoveInput(player);
+    } else if (s.equals("A")) {
+      return parseAttackInput(getOpponentName());
+    } else if (s.equals("D")) {
+      return new DoneAction();
+    } else {
+      throw new IllegalArgumentException("The input you have entered is invalid, please enter either M, A or D");
+    }
+  }
+  
+  
+  /**
+   * print a list of territories a player owns
+   * 
+   * @param name is the name of player whose territories we want to print
+   */
+  public String printTerritoriesByPlayer(String name) {
+    ArrayList<Territory> territories = this.world.getTerritoryByPlayer(name);
+    StringBuilder s = new StringBuilder();
+    for (Territory t : territories) {
+      s.append(t.getName());
+      s.append(": ");
+      s.append(t.getUnits("level0 unit"));
+      s.append(" level0 units");
+      s.append("\n");
+    }
+    return s.toString();
+  }
+
+  /**
+   * prompt the player to enter command to construct Attack input and form the
+   * attack action
+   */
+  public AttackAction parseAttackInput(String opponent) throws IOException {
+    try {
+      String s = printTerritoriesByPlayer(player.getName());
+      String input = player.readInput(divider() + s + "Which Territory do you want to attack From?\n" + divider());
+      String from = promptForValidTerritory(player.getName(), input);
+      int unitCount = promptForValidUnitCount(from);
+      s = printTerritoriesByPlayer(opponent);
+      input = player.readInput(divider() + s + "Which Territory do you want to attack?\n" + divider());
+      String to = promptForValidTerritory(opponent, input);
+      System.out.println("Attacking " + to + " from " + from + " with " + unitCount + " units");
+      HashMap<String, Integer> unts = new HashMap<String, Integer>();
+      unts.put("unit", 1);
+      return new AttackAction(unts, from, to, 1*unitCount);
+    } catch (IllegalArgumentException e) {
+      System.out.println(e.getMessage());
+      return parseAttackInput(opponent);
+    }
+  }
+
+  /**
+   * prompt the player to enter command to construct move input and form the move
+   * object accordingly
+   * 
+   * @param player is the representation of user on client-side
+   * @return a move object to be performed
+   */
+  public MoveAction parseMoveInput(ClientPlayer player) throws IOException {
+    try {
+      String s = printTerritoriesByPlayer(player.getName());
+      String input = player.readInput(divider() + s + "Which Territory do you want to move From?\n" + divider());
+      String from = promptForValidTerritory(player.getName(), input);
+      int unitCount = promptForValidUnitCount(from);
+      input = player.readInput(divider() + s + "Which Territory do you want to move To?\n" + divider());
+      String to = promptForValidTerritory(player.getName(), input);
+      System.out.println("Moving " + unitCount + " units from " + from + " to " + to);
+      HashMap<String, Integer> unts = new HashMap<String, Integer>();
+      unts.put("unit", 1);
+      return new MoveAction(unts, from, to, 1*unitCount);
+    } catch (IllegalArgumentException e) {
+      System.out.println(e.getMessage());
+      return parseMoveInput(player);
+    }
+  }
+
+  public String getOpponentName() {
+    for (String name : this.world.getPlayerName()) {
+      if (!name.equals(this.player.getName())) {
+        return name;
+      }
+    }
+    return null;
+  }
+
+  /**
+   * prompt the user to enter a valid(case-sensitive) territory name
+   * 
+   * @param playerName is the name of the player we want to check for
+   * @param input      is the input we want to check
+   * @return returns the valid territory name
+   */
+  public String promptForValidTerritory(String playerName, String input) throws IOException {
+    String territoryName = parseInputTerritory(playerName, input);
+    while (territoryName == null) {
+      input = player.readInput("Please enter the full name of the territory. For example: for Oz, enter Oz.\n");
+      territoryName = parseInputTerritory(playerName, input);
+    }
+    return territoryName;
+  }
+  
+  
+  /**
+   * prompt the user to enter the valid number of unit to move
+   * 
+   * @param territoryName is the name of the territory we want to move from
+   * @return the valid number of unit to move
+   */
+  public int promptForValidUnitCount(String territoryName) throws IOException {
+    if (this.world.getTerritoryByName(territoryName).getUnits("unit") == 0) {
+      throw new IllegalArgumentException("The territory you selected has no unit!");
+    }
+    String unitCount = player.readInput("How many units do you want to move?\n" + divider());
+    int validUnitCount = parseValidUnit(unitCount, territoryName);
+    while (validUnitCount == 0) {
+      unitCount = player.readInput(
+          "Please enter an integer greater than 1 and less than or equals to the number of unit on territory from\n");
+      validUnitCount = parseValidUnit(unitCount, territoryName);
+    }
+    return validUnitCount;
+  }
+
+  /**
+   * check if the number of unit entered is valid
+   * 
+   * @param unitCount is the string of the number of unit entered
+   * @territoryname is the name of territory we want to move the unit from
+   */
+  public int parseValidUnit(String unitCount, String territoryName) {
+    int unitNo;
+    try {
+      unitNo = Integer.parseInt(unitCount);
+    } catch (NumberFormatException e) {
+      return 0;
+    }
+    if ((unitNo < 0) || (unitNo > world.getTerritoryByName(territoryName).getUnits("unit"))) {
+      return 0;
+    } else {
+      return unitNo;
+    }
+  }
+
+  /**
+   * check whether the territory name entered is valid(case-sensitive): whether it
+   * matches the name of the player's owned territory
+   * 
+   * @param name  is the name of the player
+   * @param input is the input territory name we want to check for
+   * @return territory name if it is valid, null if it's not
+   */
+  public String parseInputTerritory(String name, String input) {
+    ArrayList<Territory> territories = this.world.getTerritoryByPlayer(name);
+    for (Territory t : territories) {
+      if (t.getName().equals(input)) {
+        return input;
+      }
+    }
+    return null;
+  }
+  
+  
+  /**
+   * form a string which is the divider
+   */
+  public String divider() {
+    return "###########################\n";
+  }
+  
+    

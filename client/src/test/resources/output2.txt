@@ -1,0 +1,114 @@
+Green player:
+-------------
+5 units in Mordor (next to:  Roshar, Oz)
+20 units in Oz (next to:  Roshar, Mordor)
+
+Blue player:
+-------------
+1 units in Roshar (next to:  Mordor, Oz)
+
+You are the Green player, what would you like to do?
+(M)ove
+(A)ttack
+(D)one
+The input you have entered is invalid, please enter either M, A or D
+You are the Green player, what would you like to do?
+(M)ove
+(A)ttack
+(D)one
+###########################
+Mordor: 5 units
+Oz: 20 units
+Which Territory do you want to move From?
+###########################
+How many units do you want to move?
+###########################
+###########################
+Mordor: 5 units
+Oz: 20 units
+Which Territory do you want to move To?
+###########################
+Moving 20 units from Oz to Mordor
+Green player:
+-------------
+0 units in Oz (next to:  Roshar, Mordor)
+25 units in Mordor (next to:  Oz, Roshar)
+
+Blue player:
+-------------
+1 units in Roshar (next to:  Oz, Mordor)
+
+You are the Green player, what would you like to do?
+(M)ove
+(A)ttack
+(D)one
+###########################
+Oz: 0 units
+Mordor: 25 units
+Which Territory do you want to move From?
+###########################
+The territory you selected has no unit!
+###########################
+Oz: 0 units
+Mordor: 25 units
+Which Territory do you want to move From?
+###########################
+Please enter the full name of the territory. For example: for Oz, enter Oz.
+How many units do you want to move?
+###########################
+Please enter an integer greater than 1 and less than or equals to the number of unit on territory from
+Please enter an integer greater than 1 and less than or equals to the number of unit on territory from
+Please enter an integer greater than 1 and less than or equals to the number of unit on territory from
+###########################
+Oz: 0 units
+Mordor: 25 units
+Which Territory do you want to move To?
+###########################
+Please enter the full name of the territory. For example: for Oz, enter Oz.
+Moving 10 units from Mordor to Oz
+Error!
+You are the Green player, what would you like to do?
+(M)ove
+(A)ttack
+(D)one
+###########################
+Oz: 0 units
+Mordor: 25 units
+Which Territory do you want to attack From?
+###########################
+The territory you selected has no unit!
+###########################
+Oz: 0 units
+Mordor: 25 units
+Which Territory do you want to attack From?
+###########################
+How many units do you want to move?
+###########################
+###########################
+Roshar: 1 units
+Which Territory do you want to attack?
+###########################
+Attacking Roshar from Mordor with 25 units
+Green player:
+-------------
+0 units in Oz (next to:  Mordor, Roshar)
+0 units in Mordor (next to:  Oz, Roshar)
+
+Blue player:
+-------------
+1 units in Roshar (next to:  Oz, Mordor)
+
+You are the Green player, what would you like to do?
+(M)ove
+(A)ttack
+(D)one
+Green player:
+-------------
+
+Blue player:
+-------------
+0 units in Oz (next to:  Mordor, Roshar)
+0 units in Mordor (next to:  Oz, Roshar)
+24 units in Roshar (next to:  Oz, Mordor)
+
+The winner is Blue

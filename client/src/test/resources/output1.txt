@@ -1,0 +1,27 @@
+Green player:
+-------------
+5 units in Mordor (next to:  Roshar, Oz)
+20 units in Oz (next to:  Roshar, Mordor)
+
+Blue player:
+-------------
+1 units in Roshar (next to:  Mordor, Oz)
+
+You are the Green player, what would you like to do?
+(M)ove
+(A)ttack
+(D)one
+###########################
+Mordor: 5 units
+Oz: 20 units
+Which Territory do you want to move From?
+###########################
+How many units do you want to move?
+###########################
+###########################
+Mordor: 5 units
+Oz: 20 units
+Which Territory do you want to move To?
+###########################
+Moving 20 units from Oz to Mordor
+The opponent has disconnected, you win!
