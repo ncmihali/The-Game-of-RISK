@@ -2,6 +2,8 @@
 
 Welcome to RISK!
 
+![alt text](https://github.com/ncmihali/The-Game-of-RISK/image.jpg?raw=true)
+
 This is a game where you fight your oponent and try to take over each other's territories. 
 In order to play, download the repository, and start the server with:
   ./gradlew run-server
