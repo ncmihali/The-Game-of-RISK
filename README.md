@@ -20,4 +20,9 @@ Next start each client to start the game:
 
 (two clients for 2 players)
 
-
+### Game Rules:
+1. Each player regenerates food and electricity after each round of actions
+2. Players can Move only within their reachable, owned territories
+3. Moving and Attacking costs food resources
+4. Players can upgrade units at a territory using their electricity resource
+5. First player to take over all territories wins!
