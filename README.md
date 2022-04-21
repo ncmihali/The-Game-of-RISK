@@ -9,7 +9,9 @@ In order to play, download the repository, and start the server with:
   ./gradlew run-server
 
 Next start each client to start the game:
+```
   ./gradlew run-client
-  ./gradlew run-client (two clients for 2 players)
+  ./gradlew run-client ```
+(two clients for 2 players)
 
 
